@@ -29,7 +29,7 @@ services:
 Now, run ```docker-copmose up -d``` to pull and run your container.
 Open your browser and nevigate to your container ip address wieh port 8080, you should see the following screen.
 
-[![Xiaomi Token Extractor](https://github.com/t0mer/Xiaomi-Token-Extractor/blob/main/screenshots/xiaomi_token_extractor.jpg?raw=true "Xiaomi Token Extractor")](https://github.com/t0mer/xiaomi-token-extractor/blob/main/screenshots/Xiaomi-Token-Extractor.jpg?raw=true "Xiaomi Token Extractor")
+[![Xiaomi Token Extractor](https://github.com/t0mer/Xiaomi-Token-Extractor/blob/main/screenshots/xiaomi_token_extractor.jpg?raw=true "Xiaomi Token Extractor")](https://github.com/t0mer/Xiaomi-Token-Extractor/blob/main/screenshots/Xiaomi-Token-Extractor.jpg?raw=true "Xiaomi Token Extractor")
 
 *Please :star: this repo if you find it useful*
 
