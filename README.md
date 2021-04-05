@@ -1,16 +1,6 @@
 # Xiaomi Token Extractor
 ## Extract your xiaomi devices token
 
-*Please :star: this repo if you find it useful*
-
-<p align="left"><br>
-<a href="https://www.paypal.com/paypalme/techblogil?locale.x=he_IL" target="_blank"><img src="http://khrolenok.ru/support_paypal.png" alt="PayPal" width="250" height="48"></a>
-</p>
-
-
-
-
-
 Xiaomi Token Extractor is a Python & [Flask](https://flask.palletsprojects.com/en/1.1.x/) powerd, easy to use system that hepls us to easely extrat our Xiaomi devices tokens from the cloud in order to easelly integrate them into our smart home (HA, HB etc'). 
 
 ## Credits
@@ -41,4 +31,9 @@ Open your browser and nevigate to your container ip address wieh port 8080, you 
 
 [![Xiaomi Token Extractor](https://github.com/t0mer/Xiaomi-Token-Extractor/blob/main/screenshots/xiaomi_token_extractor.jpg?raw=true "Xiaomi Token Extractor")](https://github.com/t0mer/Xiaomi-Token-Extractor/blob/main/screenshots/Xiaomi-Token-Extractor.jpg?raw=true "Xiaomi Token Extractor")
 
+*Please :star: this repo if you find it useful*
+
+<p align="left"><br>
+<a href="https://www.paypal.com/paypalme/techblogil?locale.x=he_IL" target="_blank"><img src="http://khrolenok.ru/support_paypal.png" alt="PayPal" width="250" height="48"></a>
+</p>
 
