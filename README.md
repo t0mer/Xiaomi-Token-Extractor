@@ -1,7 +1,7 @@
 # Xiaomi Token Extractor
 ## Extract your xiaomi devices token
 
-Xiaomi Token Extractor is a Python & [Flask](https://flask.palletsprojects.com/en/1.1.x/) powerd, easy to use system that hepls us to easely extrat our Xiaomi devices tokens from the cloud in order to easelly integrate them into our smart home (HA, HB etc'). 
+Xiaomi Token Extractor is a Python & [Flask](https://flask.palletsprojects.com/en/1.1.x/) powered, easy to use system that helps us to easily extract our Xiaomi devices tokens from the cloud in order to easily integrate them into our smart home (HA, HB etc'). 
 
 ## Credits
 Thanks to [https://github.com/tzungtzu](https://github.com/tzungtzu/Xiaomi-cloud-tokens-extractor) that did the hard work i was able to create this docker with web interface.
@@ -26,8 +26,8 @@ services:
       - "8080:8080"
 
 ```
-Now, run ```docker-copmose up -d``` to pull and run your container.
-Open your browser and nevigate to your container ip address wieh port 8080, you should see the following screen.
+Now, run ```docker-compose up -d``` to pull and run your container.
+Open your browser and navigate to your container ip address with port 8080, you should see the following screen.
 
 [![Xiaomi Token Extractor](https://github.com/t0mer/Xiaomi-Token-Extractor/blob/main/screenshots/xiaomi_token_extractor.jpg?raw=true "Xiaomi Token Extractor")](https://github.com/t0mer/Xiaomi-Token-Extractor/blob/main/screenshots/Xiaomi-Token-Extractor.jpg?raw=true "Xiaomi Token Extractor")
 
