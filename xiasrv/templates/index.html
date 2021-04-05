@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPKTXLLGEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YPKTXLLGEB');
+</script>
+
+
+
+  <link href="./css/bootstrap.min.css" rel="stylesheet" id="style-css">
+  <style>
+    .content {
+      width: 80%;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="content">
+    <div class="card text-center">
+      <div class="card-header">Xiaomi devices info & tokens</div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr class="table-success">
+                <th scope="col">Server</th>
+                <th scope="col">Name</th>
+                <th scope="col">Id</th>
+                <th scope="col">BLE Key</th>
+                <th scope="col">Token</th>
+                <th scope="col">Model</th>
+                <th scope="col">Ip</th>
+                <th scope="col">Mac</th>
+              </tr>
+            </thead>
+            <tbody id='xia_devices' style='display: none;'>
+
+            </tbody>
+
+            <tbody id='loading'>
+              <tr>
+                <td colspan='8' class="text-center">
+                  <button class="btn btn-primary " type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card-footer text-muted left">
+        <small>by Tomer Klein - <a href="https://techblog.co.il" target="_blank">Techblog.co.il</a></small>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/form-scripts.js"></script>
+
+
+</html>

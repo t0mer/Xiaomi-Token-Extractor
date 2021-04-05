@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  xiaomi_token_extractor:
+    image: techblog/xiaomi_token_extractor:latest
+    container_name: xiaomi_token_extractor
+    restart: always
+    labels:
+      - "com.ouroboros.enable=true"
+    environment:
+      - XIA_USER=
+      - XIA_PASS=
+      - XIA_SRV=  #Optional: ["cn", "de", "us", "ru", "tw", "sg", "in", "i2"]
+    ports:
+      - "8080:8080"
