@@ -1,0 +1,10 @@
+language: python
+python:
+  - 3.6
+
+services:
+  - docker
+
+ 
+script:
+  - docker ps | grep -q xiaomi_token_extractor
