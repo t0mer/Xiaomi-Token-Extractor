@@ -12,7 +12,9 @@ ENV XIA_SRV=""
 RUN apt update -yqq
 RUN apt -yqq install python3-pip
     
-RUN  pip3 install flask --no-cache-dir && \
+RUN  pip3 install --upgrade pip --no-cache-dir && \
+     pip3 install --upgrade setuptools --no-cache-dir && \
+     pip3 install flask --no-cache-dir && \
      pip3 install loguru --no-cache-dir && \
      pip3 install requests --no-cache-dir
      
