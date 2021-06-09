@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import base64, hashlib, hmac, json, os, time, requests, random
 from flask import Flask, request, make_response, render_template, url_for, g, send_from_directory, jsonify, send_file
-from flask_restful import Resource, Api
 from json import dumps
 from loguru import logger
 from XiaomiCloudConnector import XiaomiCloudConnector
