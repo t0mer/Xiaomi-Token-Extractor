@@ -16,15 +16,6 @@ password = os.getenv("XIA_PASS")
 server = os.getenv("XIA_SRV")
 
 app = Flask(__name__)
-api = Api(app)
-
-
-
-
-
-
-
-
 
 @app.route('/')
 def default():
