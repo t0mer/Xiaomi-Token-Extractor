@@ -34,6 +34,14 @@ function getDevices() {
                   });
                   $('#loading').hide();
                   $('#xia_devices').show();
+                  $('.tokens').DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copyHtml5',
+                        'excelHtml5',
+                        'pdfHtml5'
+                    ]
+                });
                   
             }
             
