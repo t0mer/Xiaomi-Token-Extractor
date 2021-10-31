@@ -1,5 +1,5 @@
 
-FROM ubuntu:18.04
+FROM techblog/flask:latest
 
 LABEL maintainer="tomer.klein@gmail.com"
 
@@ -9,19 +9,11 @@ ENV XIA_USER=""
 ENV XIA_PASS=""
 ENV XIA_SRV=""
 
-RUN apt update -yqq
-RUN apt -yqq install python3-pip
-    
-RUN  pip3 install --upgrade pip --no-cache-dir && \
-     pip3 install --upgrade setuptools --no-cache-dir && \
-     pip3 install flask --no-cache-dir && \
-     pip3 install loguru --no-cache-dir && \
-     pip3 install requests --no-cache-dir
      
- RUN mkdir -p /opt/xiasrv
+RUN mkdir -p /opt/xiasrv
  
- COPY xiasrv /opt/xiasrv
+COPY xiasrv /opt/xiasrv
    
- EXPOSE 8080
+EXPOSE 8080
  
- ENTRYPOINT ["/usr/bin/python3", "/opt/xiasrv/xiaomi.py"]
+ENTRYPOINT ["/usr/bin/python3", "/opt/xiasrv/xiaomi.py"]
