@@ -18,3 +18,12 @@ xiasrv/static/
 
 # Frontend dependencies
 web/node_modules/
+
+# Python build artefacts
+xiasrv/__pycache__/
+xiasrv/app/__pycache__/
+xiasrv/app/core/__pycache__/
+xiasrv/app/api/__pycache__/
+xiasrv/app/api/v1/__pycache__/
+xiasrv/tests/__pycache__/
+xiasrv/.pytest_cache/
