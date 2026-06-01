@@ -1,0 +1,11 @@
+# Claude / AI assistant context — local only, never track
+CLAUDE.md
+.claude/
+.cursor/
+.aider*
+
+# Design / implementation / planning docs — local only
+/docs/
+docs/*
+*.design.md
+*.implementation.md
