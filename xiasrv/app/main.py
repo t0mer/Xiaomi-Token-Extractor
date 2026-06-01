@@ -7,9 +7,12 @@ from loguru import logger
 from .api.v1 import devices
 from .core.config import settings
 
+_VERSION_FILE = Path(__file__).parent.parent.parent / "VERSION"
+_VERSION = _VERSION_FILE.read_text().strip() if _VERSION_FILE.exists() else "dev"
+
 app = FastAPI(
     title="Xiaomi Token Extractor",
-    version="1.7.0",
+    version=_VERSION,
     docs_url="/api/docs",
 )
 
