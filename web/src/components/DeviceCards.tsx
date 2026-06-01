@@ -17,7 +17,7 @@ export function DeviceCards({ devices }: Props) {
     <div className="flex flex-col gap-3">
       {devices.map((d, i) => (
         <div
-          key={i}
+          key={`${d.server}-${d.id}-${i}`}
           className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4"
         >
           <div className="flex items-center justify-between mb-2">

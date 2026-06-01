@@ -12,7 +12,19 @@ export function CopyCell({ value }: Props) {
   }
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(value)
+    try {
+      await navigator.clipboard.writeText(value)
+    } catch {
+      // Clipboard API unavailable (HTTP context) — use legacy fallback
+      const el = document.createElement('textarea')
+      el.value = value
+      el.style.position = 'fixed'
+      el.style.opacity = '0'
+      document.body.appendChild(el)
+      el.select()
+      document.execCommand('copy')
+      document.body.removeChild(el)
+    }
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }

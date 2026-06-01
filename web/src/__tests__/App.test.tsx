@@ -42,6 +42,6 @@ describe('App', () => {
       json: () => Promise.resolve([]),
     }))
     render(<App />)
-    expect(screen.getByText('Xiaomi Token Extractor')).toBeInTheDocument()
+    await waitFor(() => expect(screen.getByText('Xiaomi Token Extractor')).toBeInTheDocument())
   })
 })

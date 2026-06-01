@@ -26,7 +26,7 @@ export function DeviceTable({ devices }: Props) {
         <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
           {devices.map((d, i) => (
             <tr
-              key={i}
+              key={`${d.server}-${d.id}-${i}`}
               className="bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
             >
               <td className="px-4 py-3"><ServerBadge server={d.server} /></td>
