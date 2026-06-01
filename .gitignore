@@ -4,8 +4,17 @@ CLAUDE.md
 .cursor/
 .aider*
 
+# Visual brainstorming companion sessions
+.superpowers/
+
 # Design / implementation / planning docs — local only
 /docs/
 docs/*
 *.design.md
 *.implementation.md
+
+# Frontend build output (served by FastAPI)
+xiasrv/static/
+
+# Frontend dependencies
+web/node_modules/
