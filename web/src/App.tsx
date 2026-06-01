@@ -6,22 +6,11 @@ import { DeviceTable } from './components/DeviceTable'
 import { ThemeProvider } from './context/ThemeContext'
 import type { Device } from './types'
 
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768)
-  useEffect(() => {
-    const handler = () => setIsMobile(window.innerWidth < 768)
-    window.addEventListener('resize', handler)
-    return () => window.removeEventListener('resize', handler)
-  }, [])
-  return isMobile
-}
-
 function DeviceView() {
   const [devices, setDevices] = useState<Device[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [search, setSearch] = useState('')
-  const isMobile = useIsMobile()
 
   useEffect(() => {
     fetch('/api/v1/devices')
@@ -60,10 +49,12 @@ function DeviceView() {
         {!loading && !error && (
           <>
             <SearchBar value={search} onChange={setSearch} />
-            {isMobile
-              ? <DeviceCards devices={filtered} />
-              : <DeviceTable devices={filtered} />
-            }
+            <div className="hidden md:block">
+              <DeviceTable devices={filtered} />
+            </div>
+            <div className="md:hidden">
+              <DeviceCards devices={filtered} />
+            </div>
           </>
         )}
       </main>

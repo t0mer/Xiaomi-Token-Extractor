@@ -22,7 +22,9 @@ describe('App', () => {
       ]),
     }))
     render(<App />)
-    await waitFor(() => expect(screen.getByText('Mi Vacuum')).toBeInTheDocument())
+    await waitFor(() => {
+      expect(screen.getAllByText('Mi Vacuum')[0]).toBeInTheDocument()
+    })
   })
 
   it('shows error message on failed fetch', async () => {
