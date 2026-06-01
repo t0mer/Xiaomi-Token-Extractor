@@ -1,47 +1,41 @@
-name: release
+name: Docker
 
 on:
   workflow_dispatch:
   release:
-    types: [ published ]
-
+    types: [published]
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v2
-      -
-        name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      -
-        name: Login to DockerHub
-        uses: docker/login-action@v1 
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve version
+        id: version
+        run: echo "version=$(git describe --tags --abbrev=0 2>/dev/null || cat VERSION | tr -d ' \t\n\r')" >> "$GITHUB_OUTPUT"
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      
-      - name: Get current date
-        id: getDate
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-      - name: Get semantic version from file
-        id: getSemver
-        run: echo "::set-output name=semver::$(cat VERSION | tr -d ' \t\n\r' )"
-
-      
-      -
-        name: Build and push
-        uses: docker/build-push-action@v2
+      - name: Build and push
+        uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |
             techblog/xiaomi_token_extractor:latest
-            techblog/xiaomi_token_extractor:${{ steps.getSemver.outputs.semver }}
+            techblog/xiaomi_token_extractor:${{ steps.version.outputs.version }}
